@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Individual Website. 
+
+      Author: Jorge Suarez
+      Date:   1/30/2021
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>YoungMoneyFinance.com</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         YoungMoneyFinance.com
+      </h1>
+   </header>
+
+   <article>
+      <script>
+         /* Add content to web page */
+         document.write("<p>A personal finance Website that will help readers achieve their financial goals through proven methods.</p>");
+      </script>
+      <h2>How much is a business permit in the Counties in Southern California?:</h2>
+      <form>
+	 <input type="checkbox" id="item1" value="100" />
+         <label for="item1">LA County ($100)</label>
+	 <input type="checkbox" id="item1" value="150" />
+         <label for="item1">Riverside County ($150)</label>
+	 <input type="checkbox" id="item1" value="75" />
+         <label for="item1">SB County ($75.00)</label>
+	 <input type="submit" id="submit" value="Submit" />
+      </form>
+   </article>
+   <script>
+    function calcTotal() { 
+	var itemTotal =0;
+	var item1 =document.getElementById("item1");
+	var item2 =document.getElementById("item2");
+	var item3 =document.getElementById("item3");
+	(item1.checked) ? (itemTotal +=100) : (itemTotal +=0);
+	(item2.checked) ? (itemTotal +=150) : (itemTotal +=0);
+	(item3.checked) ? (itemTotal +=75) : (itemTotal +=0);
+	var salesTaxRate =0.08;
+	itemTotal *= 100;
+	var orderTotal = 
+	  (itemTotal + (itemTotal * salesTaxRate)) / 100;
+	alert("Your order total is $"+ orderTotal);
+      }
+   document.getElementById("submit").   addEventListener("click", calcTotal, false);
+   </script>
+
+</body>
+</html>
